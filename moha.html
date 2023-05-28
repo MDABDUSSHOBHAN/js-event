@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Babul</title>
+</head>
+<body id="body">
+
+    <h1>Exploring Event Babule</h1>
+    <section id="section3">
+
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Eum, nobis.</li>
+            <li id="item-3">Saepe, adipisci?</li>
+            <li id="item-4">Voluptates, praesentium!</li>
+            <li id="item-5">Dolorum, optio?</li>
+            <li id="item-6">Repellat, nostrum.</li>
+        </ul>
+    </section>
+         
+<style>
+    ul,body,section{
+
+        border:2px solid tomato;
+    }
+</style>
+
+
+
+    <script>
+
+           document.getElementById('item-3').addEventListener('click',function(event){
+
+
+                  console.log('This is abdus_shobhan');
+                   event.stopImmediatePropagation();     
+           })
+           document.getElementById('item-3').addEventListener('click',function(event){
+
+
+         console.log('This is abdus_shobhan1');
+     
+})
+document.getElementById('item-3').addEventListener('click',function(event){
+
+
+console.log('This is abdus_shobhan2');
+    
+})
+
+          document.getElementById('list-ul').addEventListener('click',function(){
+
+            console.log('Ul is Clicked!');
+          }) 
+          document.getElementById('section3').addEventListener('click',function(){
+
+            console.log('Section Item is Clicked!');
+          })
+          document.getElementsById('body').addEventListener('click',function(){
+
+            console.log('Body is Click');
+            
+          })
+           
+           </script>
+</body>
+</html>

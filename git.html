@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<body>
+    
+      <h1 id="secd">My Secret Info</h1>
+
+      <input type="text" id="tex2" placeholder="Please Type Delete">
+      <button id="btnd" disabled>Delete</button>
+
+
+
+
+
+      <script>
+// step--2
+
+document.getElementById('tex2').addEventListener('keyup',function(even){
+
+const Text=even.target.value;
+console.log(Text);
+const deletebut=document.getElementById('btnd');
+if(Text==='delete'){
+    deletebut.removeAttribute('disabled');
+}
+else{
+    deletebut.setAttribute('disabled',true);
+}
+})
+
+
+
+
+
+// step---1
+document.getElementById('btnd').addEventListener('click',function(){
+
+
+
+               const del=document.getElementById('secd');
+            del.style.display='none';
+                del.style.display='none';
+})
+
+
+
+
+
+
+
+
+
+installing 
+
+
+
+// if(s==='delete'){
+
+//          deletebut= removeAttribute('disabled');
+
+// }
+
+// })
+//              document.getElementById('btnd').addEventListener('click',function(){
+
+
+
+//                 const del=document.getElementById('secd');
+//                 // del.style.display='none';
+//                 del.style.backgroundColor='red';
+//                 del.style.display='none';
+
+            
+
+
+//              })
+
+       
+
+
+            </script>
+
+
+</body>
+</html>

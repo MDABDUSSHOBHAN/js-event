@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+
+<body>
+    <h1 onclick=" ">Exploring Event Delegate</h1>
+
+    <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Rerum, ipsum mollitia.</li>
+        <li class="item">Dolorem, harum recusandae!</li>
+        <li class="item">Tenetur, deserunt numquam?</li>
+        <li class="item">Iste, harum necessitatibus!</li>
+        <li class="item">Reiciendis, nam asperiores!</li>
+        <p class="item"> Lorem, ipsum dolor.</p>
+    </ul>
+
+    <button id="btn-add">Add Items</button>
+    <script>
+        // const items=  document.getElementsByClassName('item'); 
+
+        // for(const it of items){
+
+        //     // console.log(it.innerText);
+        //     it.addEventListener('click',function(event){
+
+        //         // console.log('All items is clicked!')
+        //         console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target);
+
+        //     })
+        // }
+        const ul = document.getElementById('list-container');
+        ul.addEventListener('click', function (e) {
+            if (e.target.className == "item") {
+                e.target.parentNode.removeChild(e.target);
+                                                                                                         
+            }
+            console.log(e.target);
+            // e.target.parentNode.removeChild(e.target);
+            console.log(e);
+
+
+        })
+
+
+        document.getElementById('btn-add').addEventListener('click', function () {
+
+            const Newcontainer = document.getElementById('list-container');
+            const li = document.createElement('li');
+            li.innerText = 'New Button Created!';
+            li.classList.add('item');
+            Newcontainer.appendChild(li);
+
+
+        
+
+        })
+
+    </script>
+</body>
+
+</html>
